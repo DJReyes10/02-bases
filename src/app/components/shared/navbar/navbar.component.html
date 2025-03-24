@@ -1,0 +1,35 @@
+<style>
+    nav {
+        display: flex;
+        justify-content: space-around;
+        background-color: #333;
+        color: white;
+        padding: 10px;
+        text-align: center;
+    }
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+    }
+    nav a:hover {
+        color: #f1f1f1;
+    }
+   
+</style>
+
+
+
+<nav>
+<a routerLink="/" routerLinkActive="active">Counter</a>
+
+<a [routerLink]="['/hero']" routerLinkActive="active">Hero</a>
+
+<a [routerLink]="['/dragon']" routerLinkActive="active">Dragon Ball</a>
+
+<!-- otros -->
+
+
+
+
+</nav>
