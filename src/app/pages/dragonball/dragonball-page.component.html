@@ -9,14 +9,25 @@
     <button class="mt-2 btn btn-primary">Agregar</button>
   </div>
 <div class="col-12 col-sm-6">
-    <h3>Listado</h3>
+    <h3>Listado Personajes Rotos</h3>
     <ul>
       @for (character of characters(); track character.id; let idx = $index) {
+
+        @if (character.power > 1000) {
         <li>
           <span>{{ idx +1 }} - {{character.name}}</span>
-          <strong class="text-danger"> ({{character.power}}) </strong>
+          <strong
+          [class.text-danger] ="character.power >= 8000"
+          [class.text-primary] ="character.power < 8000"
+          >
+          <!-- [ngClass]="powerClasses()" -->
+            ({{ character.power}}) </strong>
         </li>
-      }
+      } @else {
+        <li>
+          <strong> Aquí no vale la pena mostrar insectos </strong>
+      </li>
+      } }
     </ul>
 </div>
 
