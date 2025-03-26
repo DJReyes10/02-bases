@@ -6,15 +6,15 @@
 <!-- dragonball-character-app -->
 
 <dragonball-character-add
-    (newCharacter)="addCharacters($event)"
+    (newCharacter)="dragonballService.addCharacters($event)"
 />
     <!-- Hasta aquí -->
   </div>
 <div class="col-12 col-sm-6">
   <dragonball-character-list
   listName = "Listado de Personajes" 
-  [characters]="characters()" />
-</div>
+  [characters]="dragonballService.characters()" />
+</div>  
 
 
 </section>
